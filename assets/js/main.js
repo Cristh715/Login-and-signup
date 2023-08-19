@@ -8,10 +8,10 @@ form.addEventListener("submit", e=>{
     let warning = ""
     let entrar = false;
     parrafo.innerHTML = ""
-    if (user.value == "Cristh715@gmail.com" && pass.value == "cristh715"){
-        window.alert("Bienvenido xd");
+    if (user.value == "cristh715@gmail.com" && pass.value == "cristh715"){
+        window.location.href = 'inicio.html';
     }else{
-        warning += "Usuario no válido <br>"
+        warning = 'Usuario no encontrado'
         entrar = true;
     }
 
@@ -21,3 +21,10 @@ form.addEventListener("submit", e=>{
 
 })
 
+user.addEventListener("focus", () => {
+    parrafo.innerHTML = "";
+})
+
+pass.addEventListener("focus", () => {
+    parrafo.innerHTML = "";
+})
