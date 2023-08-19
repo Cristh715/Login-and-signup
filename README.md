@@ -7,3 +7,11 @@
 - Practicar la creación de un diseño web básico.
 - Comprender cómo se estructura un formulario HTML.
 - Aplicar estilos CSS para mejorar la apariencia visual.  
+## Capturas de pantalla
+  - Captura de pantalla 1 <br>
+  <img src="Screenshots/login.png" alt="Login" width="800"><br>
+  - Captura de pantalla 2 <br>
+  <img src="Screenshots/login2.png" alt="Login" width="800"><br>
+  - Captura de pantalla 3 <br>
+  <img src="Screenshots/Login3.png" alt="Login" width="800">
+  
