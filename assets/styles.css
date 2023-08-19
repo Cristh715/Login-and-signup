@@ -32,16 +32,28 @@ html, body{
 }
 
 .login-user, .login-pass{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    position: relative;
+}
+
+.login-input input::placeholder{
+    color: #c0c0c0;
+}
+
+.fa-user, .fa-lock{
+    color: var(--primary-color);
+    position: absolute;
+    margin-left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .login-input input{
     border-radius: 20px;
     border: none;
     padding: 10px 20px;
+    padding-left: 40px;
     margin: 5px 0;
-    border:2px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
     display: flex;
     flex-direction: column;
     width: 95%;
