@@ -1,0 +1,100 @@
+:root{
+    --primary-color: #1abaa1;
+    --secondary-color: #3fb3a5;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-ubuntu: 'Ubuntu', sans-serif;
+}
+
+html, body{
+    margin: 0px;
+    background: linear-gradient(180deg, rgba(30,179,156,1) 48%, rgba(20,141,123,1) 100%);
+    height:100%;
+    position: relative;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: var(--font-ubuntu);
+    font-size: 18px;
+}
+
+.login-input{ /*Div que abarca el formulario*/
+    background-color: #fff;
+    width: 40%;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 450px;
+    min-width: 320px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-user, .login-pass{
+    position: relative;
+}
+
+.login-input input::placeholder{
+    color: #c0c0c0;
+}
+
+.fa-user, .fa-lock{
+    color: var(--primary-color);
+    position: absolute;
+    margin-left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.login-input input{
+    border-radius: 20px;
+    border: none;
+    padding: 10px 20px;
+    padding-left: 40px;
+    margin: 5px 0;
+    border: 2px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+
+.login-input label{
+    display: block;
+    font-weight: bold;
+    margin: 15px 0;
+    font-size: 20px;
+    color: #1abaa1;
+}
+
+.login-input h1{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login-btn{
+    display:block;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.2s;
+    width: 100%;
+    max-width: 150px;
+}
+
+footer{
+    color: var(--secondary-color);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.login-btn:hover{
+    background-color: var(--secondary-color);
+}
