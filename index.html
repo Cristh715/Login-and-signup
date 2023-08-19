@@ -7,6 +7,7 @@
     <!-- Hoja de estilo -->
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    
     <!-- Fuente - conexión -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +18,8 @@
 <body>
     <main>
         <div class="login-input">
-            <h1>LOGIN</h1>
-            <form action="" method="post">
+            <h1>INICIA SESIÓN</h1>
+            <form id="form" action="inicio.html" method="post">
                 <label for="user"> Usuario</label>
                 <div class="login-user">
                     <input id="user" type="text" placeholder="Ingrese su usuario" name="user" autocomplete="off" required>
@@ -29,12 +30,18 @@
                     <input id="password" type="password" placeholder="Ingrese su contraseña" name="pass" required>
                     <i class="fa-solid fa-lock"></i>
                 </div>
-                <button class="login-btn">Iniciar sesión</button>
+                <button class="login-btn" type="submit">Iniciar sesión</button>
+                <div class="registro">
+                    <p>¿Aun no estas registrado? &nbsp;<a href="registro.html">Regístrate</a></p>  
+                </div>
+                <p class="warning" id="warning"></p>
             </form>
         </div>
     </main>
     <footer>
-        2023. Todos los derechos reservados
+        &#169; 2023. Todos los derechos reservados
     </footer>
+    <!-- Enlace a JavaScript -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
