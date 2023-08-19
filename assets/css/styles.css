@@ -1,6 +1,7 @@
 :root{
     --primary-color: #1abaa1;
     --secondary-color: #3fb3a5;
+    --inactive-color:#8e8e8e;
     --font-roboto: 'Roboto', sans-serif;
     --font-ubuntu: 'Ubuntu', sans-serif;
 }
@@ -24,7 +25,7 @@ main{
     font-size: 18px;
 }
 
-.login-input{ /*Div que abarca el formulario*/
+.login-form{ /*Div que abarca el formulario*/
     background-color: #fff;
     width: 50%;
     padding: 40px;
@@ -37,41 +38,54 @@ main{
 
 .login-user, .login-pass{
     position: relative;
+    padding-top: 25px;
 } 
 
-.login-input input::placeholder{
+.login-label{
     color: #c0c0c0;
+    position: absolute;
+    cursor: pointer;
+    top: 41px;
+    left: 45px;
+    transition: transform .3s, color .3s;
+}
+
+.login-input:focus + .login-label, .login-input:not(:placeholder-shown) + .login-label{
+    transform: translate(-30px,-35px) scale(.85);
+    transform-origin: left top;
+    color: var(--primary-color);  
+}
+
+.login-input{
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    padding-left: 40px;
+    margin: 5px 0;
+    border: 2px solid var(--inactive-color);
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    transition: all 0.5s;
+}
+
+.login-input:focus{
+    border:2px solid var(--primary-color);
 }
 
 .fa-user, .fa-lock{
     color: var(--primary-color);
     position: absolute;
     margin-left: 15px;
+    margin-top: 14px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.login-input input{
-    border-radius: 20px;
-    border: none;
-    padding: 10px 20px;
-    padding-left: 40px;
-    margin: 5px 0;
-    border: 2px solid var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-}
-
-.login-input label{
-    display: block;
-    font-weight: bold;
-    margin: 15px 0;
-    font-size: 20px;
-    color: var(--primary-color);
-}
-
-.login-input h1{
+.login-form h1{
     font-size: 25px;
     font-weight: bold;
     text-align: center;
