@@ -13,5 +13,5 @@
   - Captura de pantalla 2 <br>
   <img src="Screenshots/login2.png" alt="Login" width="800"><br>
   - Captura de pantalla 3 <br>
-  <img src="Screenshots/Login3.png" alt="Login" width="800">
+  <img src="Screenshots/login3.png" alt="Login" width="800">
   
