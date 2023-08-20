@@ -76,7 +76,7 @@ main{
     border:2px solid var(--primary-color);
 }
 
-.fa-user, .fa-lock{
+.fa-solid{
     color: var(--primary-color);
     position: absolute;
     margin-left: 15px;
