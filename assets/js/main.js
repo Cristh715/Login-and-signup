@@ -8,7 +8,7 @@ form.addEventListener("submit", e=>{
     let warning = ""
     let entrar = false;
     parrafo.innerHTML = ""
-    if (user.value == "cristh715@gmail.com" && pass.value == "cristh715"){
+    if (user.value == "admin" && pass.value == "admin"){
         window.location.href = 'inicio.html';
     }else{
         warning = 'Usuario no encontrado'
