@@ -1,3 +1,9 @@
+<?php
+    if ($_POST){
+        $user = $_POST['user'];
+        echo $user;
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,7 +24,7 @@
     <main>
         <div class="form-container">
             <h1>Inicia Sesión</h1>
-            <form id="form" action="inicio.html" method="post">
+            <form id="form" action="" method="post">
                 <div class="form-item">
                     <input id="user" type="text"  name="user" autocomplete="off" class="form-input" placeholder=" " required>
                     <label for="user" class="form-label"> Usuario</label>
@@ -41,6 +47,6 @@
         &#169; 2023. Todos los derechos reservados
     </footer>
     <!-- Enlace a JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <!-- <script src="assets/js/main.js"></script> -->
 </body>
 </html>
