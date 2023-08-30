@@ -16,8 +16,8 @@ class Database {
     }
 
     public function insertar($name, $surname, $user, $pass) {
-        $stmt = $this->conexion->prepare("INSERT INTO usuario (name, surname, mail, pass) VALUES ('$name', '$surname', '$user', '$pass')");
-
+        $stmt = $this->conexion->prepare("INSERT INTO usuario (name, surname, mail, pass) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param ("ssss", $name, $surname, $user, $pass);
         if ($stmt->execute()) {
             return true;
         } else {
