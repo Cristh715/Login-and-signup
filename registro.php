@@ -1,18 +1,19 @@
 <?php
-
     if($_POST){
         require_once 'php/controllers/database.php';
         $db = new Database();
-        $db->__construct();
 
         $name = $_POST['name'];
         $surname = $_POST['surname'];
         $user = $_POST['mail'];
-        $pass = $_POST['password'];
-
-        $db->insertar($name, $surname, $mail, $pass);
+        $pass = $_POST['pass'];
+        if ($db->insertar($name, $surname, $user, $pass) ) {
+            echo "Usuario registrado correctamente.";
+        } else {
+            echo "Error al registrar el usuario.";
+        }
+        $db->cerrarConexion();
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +35,7 @@
     <main>
         <div class="form-container">
             <h1>Regístrate</h1>
-            <form id="form-register" action="index.php" method="post">
+            <form id="form-register" action="" method="post">
                 <div class="form-item">
                     <input id="name" type="text"  name="name" autocomplete="off" class="form-input" placeholder=" " required>
                     <label for="name" class="form-label">Nombre</label>
@@ -77,5 +78,5 @@
     </main>
 </body>
 <!-- Enlace a JavaScript -->
-<script src="assets/js/registro.js"></script>
+<!-- <script src="assets/js/registro.js"></script> -->
 </html>
