@@ -1,4 +1,5 @@
 <?php
+
     if ($_POST){
         $user = $_POST['user'];
         echo $user;
@@ -37,7 +38,7 @@
                 </div>
                 <button class="form-btn" type="submit">Iniciar sesión</button>
                 <div class="message">
-                    <p>¿Aun no estas registrado? &nbsp;<a href="registro.html">Regístrate</a></p>  
+                    <p>¿Aun no estas registrado? &nbsp;<a href="registro.php">Regístrate</a></p>  
                 </div>
                 <p class="warning" id="warning"></p>
             </form>
